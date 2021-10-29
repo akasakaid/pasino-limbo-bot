@@ -6,6 +6,11 @@ from base64 import b64encode
 from config import *
 try:
     import requests
+    from colorama import *
+    init(autoreset=True)
+    hijau = Fore.LIGHTGREEN_EX
+    merah = Fore.LIGHTRED_EX
+
 except ImportError:
     exit("# module not installed !")
 
@@ -42,6 +47,9 @@ class mainbot:
     def format_number(self,value):
         return "{:8f}".format(value)
 
+    def format_waktu(timed):
+        return
+
     def get_client_seed(self):
         return hashlib.md5(bytes(str(int(time.time() * 1000)),'utf-8')).hexdigest()
 
@@ -68,7 +76,6 @@ class mainbot:
                 "token":token
             }
             req = self.ses.post(url,json=data).json()
-            print(req)
             if req["success"]:
                 fprofit = self.format_number(float(req["profit"]))
                 balance = req["balance"]
@@ -89,6 +96,7 @@ class mainbot:
                     total_win += 1
                 if jumlah_lose > total_lose:
                     total_lose += 1
+                print(f"# {basebet} # {self.format_number(profit)} # {balance}")
                 # perkalian if win
                 if float(betset["if win"]) != 0:
                     if status_win:
@@ -121,6 +129,11 @@ class mainbot:
                 if float(betset["target balance"]) != 0:
                     if float(balance) >= float(betset["target balance"]):
                         exit()
+            else:
+                print("- " * 25)
+                print("# balance :",req["balance"])
+                print("# message :",req["message"])
+                exit()
 
 
 if __name__ == "__main__":
