@@ -1,5 +1,21 @@
 {
-    "token":"9b21147f1a9e1e9d5e0a8143d210f0b1b2c747dd35d418e80052c76760085cde",
+    "token":"55da7d0cec5edd676468c1b2869e480e8a3b801f7bb3894c039416fc273616b5",
 
-    "coin":"BNB"
+    "coin":"BNB",
+
+    "base bet":"0.00001",
+
+    "win chance":"50",
+
+    "bet set":{
+        "if win":"1",
+        "if lose":"1.2"
+    },
+
+    "reset if win":"1",
+
+    "reset if lose":"0",
+
+    "stop if profit":"0.001"
+
 }
