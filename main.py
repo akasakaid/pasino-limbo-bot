@@ -96,7 +96,6 @@ class mainbot:
                     total_win += 1
                 if jumlah_lose > total_lose:
                     total_lose += 1
-                print(f"# {basebet} # {self.format_number(profit)} # {balance}")
                 # perkalian if win
                 if float(betset["if win"]) != 0:
                     if status_win:

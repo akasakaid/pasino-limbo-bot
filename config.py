@@ -1,4 +1,4 @@
-token = ""
+token = "18b2fafd7fbdf607af408afc8286e15454a8f7a08b19fe3129bfd745b1e32d4d"
 
 coin = "BNB"
 
