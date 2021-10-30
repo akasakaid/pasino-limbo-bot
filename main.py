@@ -153,6 +153,7 @@ class mainbot:
 
 if __name__ == "__main__":
     try:
+        os.system("cls" if os.name == "nt" else "clear")
         app = mainbot()
         app.get_user()
         print("# balance :",app.get_balance(),coin)
