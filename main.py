@@ -138,6 +138,10 @@ class mainbot:
                 # stop if balance
                 if float(betset["target balance"]) != 0:
                     if float(balance) >= float(betset["target balance"]):
+                        print("- " * 25)
+                        print(f"# target balance reacted !")
+                        print(f"# total balance : {balance} {coin.upper()}")
+                        print("- " * 25)
                         exit()
             else:
                 print("- " * 25)
