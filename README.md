@@ -1,2 +1,2 @@
-# pasino-limbo-bot
-Pasino Limbo Bot
+# Pasino Limbo Bot
+Pasino limbo bot in command line interface
