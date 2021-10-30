@@ -81,21 +81,27 @@ class mainbot:
                 balance = req["balance"]
                 if req["win"] != 0:
                     jumlah_win += 1
+                    jumlah_lose = 0
                     reset_win += 1
                     status_win = True
                     status_lose = False
                     profit += float(fprofit)
+                    status_hasil = hijau + "win"
                 else:
                     jumlah_lose += 1
+                    jumlah_win = 0
                     reset_lose += 1
                     status_win = False
                     status_lose = True
                     profit -= float(basebet)
+                    status_hasil = merah + "lose "
                 # analisi win strike lose strike
                 if jumlah_win > total_win:
                     total_win += 1
                 if jumlah_lose > total_lose:
                     total_lose += 1
+                print(f"# {status_hasil} # {basebet} # {self.format_number(profit)} # {self.format_number(float(balance))}")
+                print(f"# win strike {total_win} # lose strike {total_lose}",flush=True,end='\r')
                 # perkalian if win
                 if float(betset["if win"]) != 0:
                     if status_win:
@@ -123,6 +129,11 @@ class mainbot:
                 # stop if profit
                 if float(betset["target profit"]) != 0:
                     if profit >= float(betset["target profit"]):
+                        print("- " * 25)
+                        print(f"# profit target reacted !")
+                        print(f"# you profit : {self.format_number(profit)} {coin.upper()}")
+                        print(f"# total balance : {balance} {coin.upper()}")
+                        print("- " * 25)
                         exit()
                 # stop if balance
                 if float(betset["target balance"]) != 0:
@@ -130,8 +141,9 @@ class mainbot:
                         exit()
             else:
                 print("- " * 25)
-                print("# balance :",req["balance"])
+                print("# error !")
                 print("# message :",req["message"])
+                print("- " * 25)
                 exit()
 
 

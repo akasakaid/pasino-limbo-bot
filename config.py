@@ -1,18 +1,18 @@
-token = "18b2fafd7fbdf607af408afc8286e15454a8f7a08b19fe3129bfd745b1e32d4d"
+token = "66e0ed5ed06ea5d7c40b349e87179c7e0419315f16f7719e96668df47c60bda6"
 
-coin = "BNB"
+coin = "GEM"
 
 """
 hilo : high or low, hi = high, lo = low
 """
 
 betset = {
-    "base bet":"0.00001",
+    "base bet":"0.1",
     "chance":"10",
     "if win":"1",
     "if lose":"1.1",
     "reset if win":"1",
     "reset if lose":"0",
-    "target profit":"0.1",
-    "target balance":"1"
+    "target profit":"1000",
+    "target balance":"10000"
 }
