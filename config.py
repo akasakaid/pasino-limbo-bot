@@ -1,4 +1,4 @@
-token = "66e0ed5ed06ea5d7c40b349e87179c7e0419315f16f7719e96668df47c60bda6"
+token = ""
 
 coin = "GEM"
 
